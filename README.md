@@ -1,69 +1,9 @@
-# React + TypeScript + Vite
+workshop 3.1 กำหนดค่า score = 59 และใช้ if ในการตรวจสอบตามโจทย์กำหนด ว่า score >= 80 ให้ console.log("A") , score >= 70 ให้ console.log("B") score >= 60 ให้ console.log("C") , score >= 50 ให้ onsole.log("D") และ score < 50 ให้ console.log("F") และผลลัพที่ออกมา คือ D
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+workshop 3.2 กำหนด ราคา เปอร์เซ็นส่วนลด และ แล้วคํานวณราคาสินค้าที่ผู้ใผู้ช้ต้องจ่ายหลังจากหักส่วนลด เราใช้สูตร เปอร์เซ็นส่วนลด ÷ 100 แล้ว x ราคา แล้วใช้ if else ในการตรวจสอบว่า ถ้าราคาสินค้าหลังหักส่วนลดต่ํากว่าหรือเท่ากับ 0 ให้แสดงราคาว่าเป็น 0 ให้เข้าเงื่อนไขแรก แต่ถ้าราคาสินค้าหลังหักส่วนลดต่ํากว่าหรือเท่ากับ 500 ให้บวกค่าธรรมเนียมมการจัดส่ง 50 บาท ให้เข้าเงื่อนไขที่ 2 และสุดท้าย ถ้าราคาสินค้าหลังหักส่วนลดสูงกว่า 500 บาทให้รับส่วนลดพิเพิศษ 10% จากราคาหลังหักส่วนลด โดยใช้สูตร ราคา x 90 ÷ 100
 
-Currently, two official plugins are available:
+workshop 3.3 สร้าง Array ชื่อ students เก็บในรูปแบบของ Object โดยมีชื่อ และ เกรด ให้ครบตามโจทย์ ใช้ forEach ในการวนลูปผ่าน Array students และใช้ console ในการแสดงชื่อ และ เกรด แล้วใช้ function showStudentCount ซึ่งไม่มีรามิเมิตอร์และไม่มีการคืนค่า และใช้ students.length แสดงจำนวนของนักศึกษาทั้งหมด
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+workshop 3.4 สร้าง Array ชื่อ products เก็บในรูปแบบของ Object โดยมีราคา และ ส่วนลด แล้วใช้ function calculateTotal ซึ่งไม่มีรามิเมิตอร์และไม่มีการคืนค่า ใช้ forEach ในการวนลูปผ่าน Array ร้างตัวแปรชื่อ sumprices เป็นราคาของสินค้าที่ลดราคาแล้ว คือเอา ราคา - (ราคา x (ส่วนลด ÷ 100)) แล้วเอา ราคาของสินค้าที่ลดราคาแล้ว + discountedprice แล้วใช้ console แสดงผลรวมของราคาสินค้าหลังหักส่วนลด
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+workshop 3.5 สร้าง Array ชื่อ products เก็บในรูปแบบของ Object โดยมีชื่อเล่น และ คะแนน และเขียน function filterPassedStudents ที่รับคะแนนต่ำสุดเป็นพารามิเมิตอร์ และใช้ forEach ในการวนลูปใน Array โดยใช้ if ตรวจสอบด้วย ว่า student.score >= minscore แล้วใช้ console แสดงชื่อที่ผ่านเกณฑ์
