@@ -26,3 +26,27 @@ UserProfileCard.tsx
 
 App.tsx
 React ที่ใช้คอมโพเนนต์ UserProfileCard ข้อมูลผู้ใช้ (Users Data): มีการกำหนด array ของ UserData ตัวอย่างมาให้ 4 รายการ การแสดงผล: ใช้ .map() เพื่อวนลูปผ่าน array ของผู้ใช้ และแสดง UserProfileCard สำหรับผู้ใช้แต่ละคน การจัดการ Event: มีฟังก์ชัน handleViewDetails ที่จะถูกเรียกเมื่อผู้ใช้คลิกปุ่ม "View Details" ใน UserProfileCard โดยจะทำการ console.log แสดง User ID Layout: ใช้ Flexbox เพื่อจัดเรียง User Profile Card ในรูปแบบ Grid ที่ปรับขนาดได
+
+
+
+
+
+##Week5
+
+Counter.tsx
+ใช้ useState จำว่าตอนนี้ตัวเลขอยู่ที่เท่าไหร่ , ใช้ Increment ให้ตัวเลขที่จำไว้เพิ่มขึ้นทีละ 1 , ใช้ Decrement ให้ตัวเลขลดลงทีละ 1
+
+Form.tsx
+ใช้ useState จำข้อมูลชื่อและอีเมลที่เรากำลังกรอก , ใช้ฟังก์ชัน handleChange ให้อัปเดตข้อมูลทุกครั้งที่เราพิมพ์อะไรลงในช่องชื่อหรืออีเมล ฟังก์ชัน handleChange จะอัปเดตข้อมูลที่ useState กำลังเก็บอยู่ทันที ให้เห็นข้อมูลที่พิมพ์ไปปรากฏขึ้นที่หน้าจอแบบเรียลไทม์
+
+
+
+
+
+
+
+
+
+
+
+
