@@ -41,6 +41,17 @@ Form.tsx
 
 
 
+##week6
+
+workshop6.1
+
+กำหนด props ที่จะรับเข้ามา , imageUrl = ลิงก์รูปสินค้า , title = ชื่อสินค้า , description = คำอธิบาย , price = ราคา , onAddToCart = ฟังก์ชันเรียกตอนกดปุ่ม , <img src={imageUrl} alt={title} /> แสดงรูปสินค้า , <p className="text-xl font-bold">฿{price.toLocaleString()}</p> แสดงราคา พร้อม format , <button onClick={onAddToCart}>Add to Cart</button> ปุ่มกดเพิ่มลงตะกร้า
+
+workshop 6.2
+
+const [isOpen, setIsOpen] = useState(false); สร้าง state เอาไว้เก็บว่าเมนูมือถือเปิดหรือปิด , <button onClick {() => setIsOpen(!isOpen)}> ปุ่ม hamburger toggle เปิด/ปิดเมนู , <div className="hidden md:flex space-x-8"> <a href="#">Home</a> เมนูปกติ แสดงเฉพาะตอนจอใหญ่ (md:flex) จอเล็กซ่อน (hidden) , <div className={`md:hidden ... ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}></div> เมนูมือถือ แสดงเฉพาะตอนจอเล็ก 
+
+
 
 
 
